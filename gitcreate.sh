@@ -8,10 +8,10 @@
 # Gather constant vars
 CURRENTDIR=${PWD##*/}
 
-curl -u 'dan13ram' https://api.github.com/user/repos -d '{"name":"${CURRENTDIR"}'
+curl -u 'dan13ram' https://api.github.com/user/repos -d "{\"name\":\"${CURRENTDIR}\"}"
 git init
 echo "#${CURRENTDIR}" >> README.md
 git add .
 git commit -m "First Commit"
-git remote set-url origin https://github.com/dan13ram/${CURRENTDIR}.git
+git remote add origin https://github.com/dan13ram/${CURRENTDIR}.git
 git push --set-upstream origin master
